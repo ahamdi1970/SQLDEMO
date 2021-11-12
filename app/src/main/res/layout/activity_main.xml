@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_Add"
+        android:id="@+id/btn_viewAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -17,20 +17,20 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/ViewAll"
-        app:layout_constraintEnd_toStartOf="@+id/btn_viewAll"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Add"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sw_active" />
 
     <Button
-        android:id="@+id/btn_viewAll"
+        android:id="@+id/btn_Add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="@string/Add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_Add"
-        app:layout_constraintTop_toTopOf="@+id/btn_Add" />
+        app:layout_constraintStart_toEndOf="@+id/btn_viewAll"
+        app:layout_constraintTop_toTopOf="@+id/btn_viewAll" />
 
     <EditText
         android:id="@+id/et_name"
@@ -72,12 +72,15 @@
         app:layout_constraintTop_toBottomOf="@+id/et_age"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-    <androidx.recyclerview.widget.RecyclerView
+    <ListView
         android:id="@+id/lv_customerList"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="399dp"
+        android:layout_height="488dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Add" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_viewAll" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
